@@ -1,0 +1,97 @@
+View what I learned from MIT 6.092.
+===================================
+For the reason that I have learned a lot of Python, so I mainly what to record the 
+difference between Python and Java.
+
+Grammar
+------
+* Every sentence should be included in a class and this class must have a main 
+    method and optional other method.
+* main method have fixed signature "public static void main(String[] args){}. The
+    args is an String array.
+* If a method isn't declared as a void method, it must return a value.
+* Every statement should follow a semicolon.
+* Variable only living in the cruly brace where it is defined.
+* method can only be defined within class, but method.
+* One file can only have one class declared with public.
+* Static keyword can be used to declare field, method and code block. The stuff
+    declared with static should be seen as a public source of the class. The public
+    code will be executed only once when the class declare.
+    Classname.stuffname can call the stuff at any time. 
+    * Static method can't use non-static variable. It must treat it as an argument.
+    
+* Type convert implicitly have a chain. The principle is higher accuracy type can
+    contain lower accuracy. Boolean can't convert or be converted by andy other.
+    * The chain:byte -> short -> int -> long -> float -> double -> char -> int.
+* Java must declare the type of parameters and return value.
+* int -> string:Integer.toString(); string -> int:Integer.parseInt;
+* String can concatenate with String or other number type by using '+'.
+
+* Java has two kinds of data type, primitive and reference. Primitive type store
+    its value directly in its location using binary coding while reference type
+    store a number that locate the object.
+* Java has eight primitive type: 
+    * integer: byte, short, int, long
+    * float: float, double
+    * character: char
+    * bool: boolean 
+
+
+
+Key Word
+------
+* Java logical AND: &&; logical OR: ||;Bollean: treu, false.
+* Mathematical function: Math.cos, Math.sin, Math.pow, Math.log, etc.
+* if () {}; while () {}; for (initialization;condition;update){}; Bracket is 
+    necessary.
+* enhanced for loop: for (TYPE NAME : array)
+* System.out.println == print; System.out.print == print(end=''); 
+    System.out.printf = print(%);
+* An array is an indexed list of the same type data.
+    * Declare an array: TYPE[] NAME
+    * Initialization: TYPE[] NAME = new TYPE[SIZE]/{elements}
+    * array has .length method to return its size.
+    * NAME[i] to call i+1 element.
+* Class Consturctor:
+    * __init__ -> same name with class method
+    * no need for self argument if no name conflict.
+    * self -> this
+* When instantiate a object from a class, array or create a anonymous object, new
+    keyword should be added in front of.
+* switch (condition) {
+    case num: 
+        statements; 
+        break; 
+    ... 
+    default: 
+        statements; 
+        break;}
+
+
+Experience & Recommendation
+------
+* Don't use '==' between double. Use Math.abs(a-b) < 1e-9 instead.
+* Use string1.equals(string2) to compare two string.
+* 5/2=2, 5.0/2.0=2.5
+* infinite number: float('inf') -> Integer.MAX_VALUE
+
+
+Programming Style
+------
+* We follow the Style recommendation of cs61b: 
+    https://sp19.datastructur.es/materials/guides/style-guide.html
+* docstring *** comment *** -> javadoc /** comment */
+    * javadoc can contain some keyword
+    * https://en.wikipedia.org/wiki/Javadoc
+
+
+
+
+Compile
+------
+* Java work in an virtual machine, a.k.a JVM. So it will be first compile to byte
+code depend on that virtual machine and then interpreted by that machine.
+* .java -- javac(compile) --> .class -- java(interpreter) --> result.
+
+
+
