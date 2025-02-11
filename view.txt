@@ -6,7 +6,7 @@ difference between Python and Java.
 Grammar
 ------
 * Every sentence should be included in a class and this class must have a main 
-    method and optional other method.
+    method and optional other methods or classes.
 * main method have fixed signature "public static void main(String[] args){}. The
     args is an String array.
 * If a method isn't declared as a void method, it must return a value.
@@ -14,11 +14,9 @@ Grammar
 * Variable only living in the cruly brace where it is defined.
 * method can only be defined within class, but method.
 * One file can only have one class declared with public.
-* Static keyword can be used to declare field, method and code block. The stuff
-    declared with static should be seen as a public source of the class. The public
-    code will be executed only once when the class declare.
-    Classname.stuffname can call the stuff at any time. 
-    * Static method can't use non-static variable. It must treat it as an argument.
+* Static keyword can create variable or method belong to method, not object.
+* Access control use Public, Private, etc keyword to restrict scope that method 
+    or variable can be called.
     
 * Type convert implicitly have a chain. The principle is higher accuracy type can
     contain lower accuracy. Boolean can't convert or be converted by andy other.
@@ -66,11 +64,30 @@ Key Word
     default: 
         statements; 
         break;}
+* Static keyword can be used to declare field, method and code block. The stuff
+    declared with static should be seen as a public source of the class. The public
+    code will be executed only once when the class declare.
+    Classname.stuffname can call the stuff at any time. 
+    * Static method can't use non-static variable. It must treat it as an argument.
+* Public&private&etc keyword
+    * public: can be called everywhere.
+    * private: only current class.
+    * protected: current class, class in current package or subclass in 
+        different package.
+    * default: class in current package.
+* Some substitutes for python data structure:
+    * list -> ArrayList
+        * .append() -> .add()
+        * [] -> .get()
+    * set -> TreeSet/HashSet
+    * dictionary -> TreeMap/HashMap 
+* package keyword can decalre .java file in a package. Then using import keyword
+    can cite related classes.
 
 
 Experience & Recommendation
 ------
-* Don't use '==' between double. Use Math.abs(a-b) < 1e-9 instead.
+* Don't use '==' between double type data. Use Math.abs(a-b) < 1e-9 instead.
 * Use string1.equals(string2) to compare two string.
 * 5/2=2, 5.0/2.0=2.5
 * infinite number: float('inf') -> Integer.MAX_VALUE
