@@ -83,6 +83,10 @@ Key Word
     * dictionary -> TreeMap/HashMap 
 * package keyword can decalre .java file in a package. Then using import keyword
     can cite related classes.
+* Interface declare a special format that can be implemented by class. 
+    * Interface can only declare abstract method. And class can implement these
+        methods by implement <interface>.
+    * This can help Java achieve inherit from serveral father class.
 
 
 Experience & Recommendation
@@ -100,6 +104,8 @@ Programming Style
 * docstring *** comment *** -> javadoc /** comment */
     * javadoc can contain some keyword
     * https://en.wikipedia.org/wiki/Javadoc
+* default set class fields and method as private.
+    * if need access to a field, make a method.
 
 
 
