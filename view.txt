@@ -1,6 +1,6 @@
 View what I learned from MIT 6.092.
 ===================================
-For the reason that I have learned a lot of Python, so I mainly what to record the 
+For the reason that I have learned a lot of Python, so I mainly want to record the 
 difference between Python and Java.
 
 Grammar
